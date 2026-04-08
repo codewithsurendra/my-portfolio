@@ -1,0 +1,230 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0 auto;
+    font-family: sans-serif;
+    width: 90%;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsla(0, 76%, 13%, 0.415);
+    position: relative;   
+}
+
+header {
+    width: 80%;
+    margin: 2rem auto;
+    align-items: flex-end;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+.navbar-link {
+    margin: 0 1rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+    color: hsl(0, 68%, 36%);
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    color: lightslategray;
+    background-color: lightyellow;
+    transition: 0.3s;
+}
+
+#welcome-section {
+    padding: 35rem;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(to right, lightsalmon, lightblue, hsl(50, 90%, 94%));
+}
+
+#welcome-section h1 {
+    font-size: 6rem;
+    color: hsl(29, 78%, 18%);
+    margin-bottom: 9.5rem;
+}
+
+#welcome-section h1 span {
+    color: rosybrown;
+}
+
+#welcome-section p {
+    font-size: 4rem;
+    color: hsl(0, 64%, 54%);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid white;
+    width: 0;
+    animation: typing 4s steps(25) forwards infinite, blink 0.7s infinite;
+}
+
+#project-section {
+    background-color: hsla(11, 9%, 49%, 0.839);
+}
+
+#project-section h2 {
+    margin: 1rem;
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 2.5rem;
+    color: rgb(10, 78, 166);
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.project-tile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: repeat(3, 1fr); */
+    gap: 2rem;
+    margin: 1rem 2rem;
+    position: relative;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.recipe-page img {
+    object-fit: fill;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.2rem;
+}
+
+.project-tile a {
+    background-color: transparent;
+    font-weight: bold;
+    position: absolute;
+    font-size: 2.2rem;
+}
+
+.project-tile a:hover, .project-tile a:focus {
+    background-color: darkolivegreen;
+    color: #fefefe;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+.project-tile .one {
+    top: 30%;
+    left: 17%;
+    z-index: 1;
+}
+
+.project-tile .two {
+    top: 36%;
+    left: 21%;
+    z-index: 1;
+    color: rgb(189, 33, 33);
+}
+
+.project-tile .three {
+    bottom: 3%;
+    left: 20%;
+    z-index: 1;
+    color: #fefafe;
+}
+
+.project-tile .four {
+    bottom: 10%;
+    right: 11%;
+    z-index: 1;
+    color: darkolivegreen;
+}
+
+.recipe-page {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #222;
+    color: #fff;
+    margin-top: 4rem;
+}
+
+footer h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: lightcoral;
+}
+
+footer p {
+    font-size: 1.4rem;
+    color: #aaa;
+}
+
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media only screen and (max-width: 789px) {
+    html {
+        font-size: 56.3%;
+    }
+}
+
+@media only screen and (max-width: 378px) {
+    html {
+        font-size: 51%;
+    }
+}
